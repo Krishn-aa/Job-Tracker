@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "install-server":"cd server && npm install",
-    "start-server":"cd server && node app.js",
+    "start-server":"cd server && node server.js",
     "install-client":"cd client/job-tracker && npm install",
     "build-client":"cd client/job-tracker && npm run build",
     "start-client":"cd client/job-tracker && npm run dev"
