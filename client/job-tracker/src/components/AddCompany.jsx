@@ -1,15 +1,15 @@
-import { useState } from 'react';
-import { addCompany } from '../services/api';
+import { useState } from "react";
+import { addCompany } from "../services/api";
 
 const AddCompany = ({ onAdd }) => {
-  const [name, setName] = useState('');
+  const [name, setName] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const newCompany = { name };
     await addCompany(newCompany);
     onAdd();
-    setName('');
+    setName("");
   };
 
   return (
@@ -22,7 +22,10 @@ const AddCompany = ({ onAdd }) => {
         onChange={(e) => setName(e.target.value)}
         required
       />
-      <button type="submit" className="bg-blue-500 text-white py-2 px-4 rounded">
+      <button
+        type="submit"
+        className="bg-blue-500 text-white py-2 px-4 rounded"
+      >
         Add Company
       </button>
     </form>
